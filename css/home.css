@@ -1,0 +1,82 @@
+:root {
+    --color01:rgba(77, 247, 105, 0.808);;
+    --color02: #4a1ea8;
+    --color03: #6c63ff;
+    --color04: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--color01);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 10vh;
+    background: var(--color02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color04);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+header img {
+  max-width: 100%;
+  height: auto;
+  width: 200px; 
+  object-fit: contain;
+}
+
+
+.materias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 20px;
+}
+
+.materias a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--color04);
+    background: var(--color03);
+    width: 250px;            
+    text-align: center;        
+    padding: 12px 0;           
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.materias a:hover {
+    background: var(--color02);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px var(--shadow);
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: 1.3rem;
+    }
+
+    .materias a {
+        font-size: 1rem;
+        width: 200px;   
+        padding: 10px 0;
+    }
+}
